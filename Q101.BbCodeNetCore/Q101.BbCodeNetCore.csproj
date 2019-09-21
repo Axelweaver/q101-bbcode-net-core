@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Company>Q101</Company>
+    <Authors>CodeKicker</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Q101.BbCodeNetCore is a stable and performant BBCode-Parser for .NET/C#. Transform any BBCode into HTML. All tags are fully customizable.
+The library Codekicker.BBCode has been remaked [https://archive.codeplex.com/?p=bbcode](https://archive.codeplex.com/?p=bbcode "") for the platform .Net Core
+Old library is licensed under the Creative Commons Attribution 3.0 Licence: [http://creativecommons.org/licenses/by/3.0/](http://creativecommons.org/licenses/by/3.0/ "")
+
+Made a little code refactoring
+
+[Link to the source library developers site]([url:http://codekicker.de] "")</Description>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageTags>BbCode</PackageTags>
+    <Copyright>CodeKicker http://codekicker.de/</Copyright>
+    <PackageProjectUrl>https://github.com/Axelweaver/q101-bbcode-net-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Axelweaver/q101-bbcode-net-core</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+  </PropertyGroup>
+
+</Project>
