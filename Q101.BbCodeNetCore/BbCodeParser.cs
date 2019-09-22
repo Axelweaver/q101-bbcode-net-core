@@ -197,7 +197,7 @@ namespace Q101.BbCodeNetCore
                         // isThisTagAlreadyOnStack would have been false
                         Debug.Assert(openingNode != null); 
 
-                        if (openingNode.Tag != tag.Tag
+                        if (openingNode?.Tag != tag.Tag
                             && ErrorMode == ErrorMode.Strict
                             && ErrorOrReturn("TagNotMatching", tag.Tag.Name, openingNode.Tag.Name))
                         {

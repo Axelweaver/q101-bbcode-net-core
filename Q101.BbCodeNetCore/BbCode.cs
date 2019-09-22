@@ -30,6 +30,7 @@ namespace Q101.BbCodeNetCore
             return new BbCodeParser(ErrorMode.ErrorFree, null, new[]
                 {
                     new BbTag("b", "<b>", "</b>"), 
+                    new BbTag("s", "<s>", "</s>"), 
                     new BbTag("i", "<span style=\"font-style:italic;\">", "</span>"), 
                     new BbTag("u", "<span style=\"text-decoration:underline;\">", "</span>"), 
                     new BbTag("h1", "<h1>", "</h1>"),
