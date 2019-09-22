@@ -128,6 +128,7 @@ namespace Q101.BbCodeNetCore
         /// allows for custom modification of the tag content before rendering takes place
         /// </summary>
         public Func<string, string> ContentTransformer { get; }
+
         public BbAttribute[] Attributes { get; }
 
         public BbAttribute FindAttribute(string name)

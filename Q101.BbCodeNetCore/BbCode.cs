@@ -20,7 +20,9 @@ namespace Q101.BbCodeNetCore
                 throw new ArgumentNullException(nameof(bbCode));
             }
 
-            return DefaultParser.ToHtml(bbCode);
+            var result = DefaultParser.ToHtml(bbCode);
+
+            return result;
         }
 
         static BbCodeParser GetParser()
@@ -30,15 +32,21 @@ namespace Q101.BbCodeNetCore
                     new BbTag("b", "<b>", "</b>"), 
                     new BbTag("i", "<span style=\"font-style:italic;\">", "</span>"), 
                     new BbTag("u", "<span style=\"text-decoration:underline;\">", "</span>"), 
-                    new BbTag("code", "<pre class=\"prettyprint\">", "</pre>"), 
-                    new BbTag("img", "<img src=\"${content}\" />", "", false, true), 
-                    new BbTag("quote", "<blockquote>", "</blockquote>"), 
+                    new BbTag("h1", "<h1>", "</h1>"),
+                    new BbTag("h2", "<h2>", "</h2>"),
+                    new BbTag("h3", "<h3>", "</h3>"),
+                    new BbTag("hr", "<hr/>", string.Empty, false, true), 
+                    new BbTag("small", "<small class=\"text-muted\">", "</small>"), 
+                    new BbTag("code", "<pre class=\"prettyprint\"><code>", "</code></pre>"), 
+                    new BbTag("img", "<img src=\"${content}\" />", string.Empty, false, true), 
+                    new BbTag("quote", "<blockquote class=\"blockquote\"><p class=\"mb-0\">", "</p></blockquote>"), 
                     new BbTag("list", "<ul>", "</ul>"), 
+                    new BbTag("list=1", "<ol type=\"1\">", "</ol>"), 
                     new BbTag("*", "<li>", "</li>", true, false), 
                     new BbTag("url", 
                         "<a href=\"${href}\">", 
                         "</a>", 
-                        new BbAttribute("href", ""), 
+                        new BbAttribute("href", string.Empty), 
                         new BbAttribute("href", "href")), 
                 });
         }
@@ -209,7 +217,8 @@ namespace Q101.BbCodeNetCore
             {
                 if (node is TagNode && (tagFilter != null && !tagFilter((TagNode)node)))
                 {
-                    return; //skip filtered tags
+                    // skip filtered tags
+                    return; 
                 }
 
                 foreach (var subNode in node.SubNodes)

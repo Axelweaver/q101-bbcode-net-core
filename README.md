@@ -9,3 +9,39 @@ Made a little code refactoring
 
 [Link to the source library developers site]([url:http://codekicker.de] "")
 
+ 
+To install this assembly (class library) on the package manager console tab, run the following command:
+ 
+```bash
+
+   Install-Package Q101.BbCodeNetCore
+
+```
+
+Quickstart
+Just call BBCode.ToHtml("My [b]BBCode[/b] [i]here[/i]")
+
+```cs
+
+		var html = BbCode.ToHtml("My [b]BBCode[/b] [i]here[/i]");
+
+```
+
+If you use Asp.Net, create extension class for HtmlHelper:
+
+```cs
+
+	public static class HtmlHelperBbCodeExtensions
+	{
+		public static IHtmlContent RenderBbCode(this IHtmlHelper helper, string bbcodeValue)
+		{
+			var html = BbCode.ToHtml(bbcodeValue);
+			
+			return helper.Raw(html);
+		}
+		
+	}
+
+```
+
+
