@@ -1,6 +1,6 @@
 ## Q101.BbCodeNetCore
-[![NuGet Package](https://img.shields.io/nuget/v/Q101.Q101JsonMediaTypeFormatter.svg?style=for-the-badge&logo=appveyor)](https://www.nuget.org/packages/Q101.Q101JsonMediaTypeFormatter)
-[![NuGet Package](https://img.shields.io/nuget/dt/Q101.Q101JsonMediaTypeFormatter.svg?style=for-the-badge&logo=appveyor)](https://www.nuget.org/packages/Q101.Q101JsonMediaTypeFormatter)
+[![NuGet Package](https://img.shields.io/nuget/v/Q101.BbCodeNetCore.svg?style=for-the-badge&logo=appveyor)](https://www.nuget.org/packages/Q101.BbCodeNetCore)
+[![NuGet Package](https://img.shields.io/nuget/dt/Q101.BbCodeNetCore.svg?style=for-the-badge&logo=appveyor)](https://www.nuget.org/packages/Q101.Q101.BbCodeNetCore)
 
 
 Q101.BbCodeNetCore is a stable and performant BBCode-Parser for .NET/C#. Transform any BBCode into HTML. All tags are fully customizable.
